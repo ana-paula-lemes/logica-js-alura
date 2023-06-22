@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/logica/style.css">
+    <title>Lógica</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    mostra("<h1> JOGO DA ADIVINHAÇÃO! </h1>");
+
+    var numeroPensado = Math.round(Math.random() * 10);
+
+    var tentativas = 1;
+
+    while(tentativas <= 3) {
+    
+        var chute = parseInt(prompt("Digite seu chute:"));
+
+        if(chute == numeroPensado) {
+            mostra("Você acertou, o número pensado era: " + numeroPensado + "! Parabéns! ^-^");
+            break;
+        }
+
+        else{
+            mostra("Você errou! O número pensado era: " + numeroPensado + " :(");
+            pulaLinha
+            mostra("Tente novamente! :) ");
+        }
+
+        tentativas++;
+}
+    mostra("FIM!");
+
+</script>

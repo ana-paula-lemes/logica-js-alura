@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/logica/style.css">
+    <title>Lógica</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    
+    function pulaLinha() {
+        document.write("<br>");
+
+    }
+
+    var ano = 2023;
+    mostra("<h1> Qual a média de idade da sua família? Bora descobrir!</h1>");
+    mostra("Olá, eu tenho: " + (ano - 2002) + " anos");
+    
+    var idadepai = 55;
+    var idademae = 54;
+    var idadeirma = 27;
+    var idadeeu = 21;
+    var idadesobrinho = 7;
+
+    var mediaidade = (idadepai + idademae + idadeirma+ idadeeu + idadesobrinho)/5;
+
+    mostra("Média de idade da minha família é : " + mediaidade + " anos.");
+    mostra("---------------------------------------------------------------------");
+    pulaLinha()
+    pulaLinha()
+
+    var totalFamiliares = parseInt(prompt("Qual a quantidade de familiares? "));
+
+    var numero = 1
+
+    var totalIdades = 0;
+
+    while(numero <= totalFamiliares) {
+        
+        var idadeFamiliar = parseInt(prompt("Informe a idade do familiar: "));
+        totalIdades = totalIdades + idadeFamiliar;
+        numero++;
+    }
+    
+    var mediaidade = totalIdades/totalFamiliares;
+    mostra("A média das idades familiares é: " + mediaidade);
+    mostra("FIM!");
+
+    </script>

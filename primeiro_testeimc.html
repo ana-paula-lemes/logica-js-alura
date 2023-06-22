@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/logica/style.css">
+    <title>Lógica</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    alert("Este é um pop-up teste!");
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function calculaImc(peso, altura) {
+        var imc = peso / (altura * altura);
+        return imc;
+        //mostra("O imc calculado é " + Math.round(imc) + ".");
+    }
+
+    var ano = 2023;
+
+    mostra("<h1>Meu primeiro teste utilizando HTML e JavaScript!</h1>");
+
+    mostra("<p>Nesse código irei simular alguns códigos em JavaScript.  Boa leitura!</p>");
+    
+    mostra("---------------------------------------------------------------------");
+
+    mostra("<h2> CALCULADORA IMC</h2>");
+    
+    var imcAna = calculaImc(80, 1.73);
+    var imcAmigo = calculaImc(70, 1.70);
+    var totalImc = imcAna + imcAmigo;
+
+    mostra("O meu IMC é: " + imcAna + ".");
+    mostra("O IMC do meu amigo é: " + imcAmigo + ".");
+    pulaLinha()
+    mostra("A soma do IMCS é: " + totalImc + ".");
+    mostra("---------------------------------------------------------------------");
+    pulaLinha()
+    
+    mostra("<strong>AGORA VAMOS CALCULAR SEU IMC? BORA!</strong>");
+    pulaLinha()
+    
+    var nomeUsuario = prompt("Informe seu nome:");
+    var pesoInformado = prompt(nomeUsuario + ", informe seu peso:");
+    var alturaInformada = prompt(nomeUsuario + ", informe sua altura:");
+
+    var imc = calculaImc(pesoInformado, alturaInformada);
+    mostra( nomeUsuario + ", seu IMC é: " + imc + ".");
+    pulaLinha()
+
+    if(imc < 18.5) {
+        mostra("Você está abaixo do recomendado.");
+    }
+
+    if(imc > 35) {
+        mostra("Você está acima do recomendado");
+    }
+
+    if(imc >= 18.5 && imc <=35) {
+
+        mostra("Seu IMC está dentro do recomendado.");
+    }
+</script>
+
+</html>

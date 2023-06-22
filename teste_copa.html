@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/logica/style.css">
+    <title>Lógica</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    mostra("<h1> COPAS MUNDIAIS </h1>");
+    
+    var limite = parseInt(prompt("Entre com a data limite: "));
+    var anoCopa = 1930;
+    var anoCopaFutura = 2024;
+
+    while(anoCopa <= limite) {
+    mostra("Teve copa em: " + anoCopa);
+    anoCopa = anoCopa + 4;
+    }
+
+    mostra("FIM!");
+
+</script>
